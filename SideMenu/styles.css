@@ -1,0 +1,177 @@
+/* Шрифт*/
+/* Обычный */
+@font-face {
+  font-family: "TTLakes";
+  font-style: normal;
+  font-weight: 400;
+  src: local("TTLakes"),
+    url("./Font/TTLakes/TTLakes-Regular.woff") format("woff");
+}
+
+/* Жирный */
+@font-face {
+  font-family: "TTLakes";
+  font-style: normal;
+  font-weight: 700;
+  src: local("TTLakes"), url("./Font/TTLakes/TTLakes-Bold.woff") format("woff");
+}
+
+/* Полужирный */
+@font-face {
+  font-family: "TTLakes DemiBold";
+  font-style: normal;
+  font-weight: 600;
+  src: local("TTLakes"),
+    url("./Font/TTLakes/TTLakes-DemiBold.woff") format("woff");
+}
+
+.sideBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 320px;
+  min-height: 100vh;
+  box-sizing: border-box;
+  box-shadow: 16px 0 52px 0 rgba(14, 24, 80, 0.2);
+  position: absolute;
+  left: 0;
+  padding: 18.73px 24px 32px;
+}
+
+.sideBlock__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sideBlock__header_left {
+  display: flex;
+  gap: 16.73px;
+  align-items: center;
+}
+
+.btn {
+  display: flex;
+  border: 0px;
+  background-color: white;
+  padding: 0;
+}
+
+.sideBlock__menu {
+  display: flex;
+  flex-direction: column;
+  padding-block: 46.27px;
+}
+
+.nav,
+.sideBlock__contacts_email,
+.lng {
+  font-family: "TTLakes DemiBold";
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  color: rgba(27, 28, 33, 1);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+
+.nav {
+  padding-bottom: 15px;
+  height: 32px;
+}
+
+.sideBlock__bottomNav {
+  display: flex;
+  gap: 16px;
+}
+
+.sideBlock__footer {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.sideBlock__contacts {
+  display: flex;
+  flex-direction: column;
+  width: 196px;
+  height: 124px;
+  justify-content: space-between;
+}
+
+.sideBlock__contacts_phone {
+  font-family: "TTLakes";
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  text-decoration: none;
+  color: rgba(27, 28, 33, 1);
+}
+
+.sideBlock__lang {
+  display: flex;
+  gap: 8px;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.5;
+  transform: scale(1.15);
+  transition-duration: 0.7s;
+  cursor: pointer;
+}
+
+.lng:hover,
+.lng:focus {
+  color: rgba(126, 126, 130, 1);
+  transform: scale(1.15);
+  transition-duration: 0.7s;
+  cursor: pointer;
+}
+
+.nav:hover,
+.nav:focus {
+  color: rgba(126, 126, 130, 1);
+  transition-duration: 0.7s;
+  cursor: pointer;
+  position: relative;
+  left: -24px;
+  gap: 20px;
+  display: flex;
+}
+
+.nav:hover::before,
+.nav:focus::before {
+  content: url(./IMG/menu/highlight.svg);
+}
+
+.sideBlock__bottomNav_call:hover,
+.sideBlock__bottomNav_chat:hover,
+.sideBlock__bottomNav_profile:hover,
+.sideBlock__bottomNav_call:focus,
+.sideBlock__bottomNav_chat:focus,
+.sideBlock__bottomNav_profile:focus {
+  transform: rotate(360deg);
+}
+
+.sideBlock__contacts_email:hover,
+.sideBlock__contacts_phone:hover,
+.sideBlock__contacts_email:focus,
+.sideBlock__contacts_phone:focus {
+  transform: scale(1.05);
+}
+
+.btn:active,
+.lng:active,
+.nav:active,
+.sideBlock__bottomNav_call:active,
+.sideBlock__bottomNav_chat:active,
+.sideBlock__bottomNav_profile:active,
+.sideBlock__contacts_email:active,
+.sideBlock__contacts_phone:active {
+  transform: translateY(4px) scale(0.98);
+  transition: all 0.05s ease;
+}
